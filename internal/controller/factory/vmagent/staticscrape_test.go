@@ -156,6 +156,7 @@ metric_relabel_configs: []
 						InsecureSkipVerify: true,
 					},
 					ScrapeTimeout:   "55s",
+					MaxScrapeSize:   "2KB",
 					Interval:        "10s",
 					ScrapeInterval:  "50s",
 					FollowRedirects: pointer.Bool(true),
@@ -245,6 +246,7 @@ static_configs:
     group: prod
 scrape_interval: 50s
 scrape_timeout: 55s
+max_scrape_size: 2KB
 metrics_path: /metrics-1
 proxy_url: https://some-proxy
 follow_redirects: true

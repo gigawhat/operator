@@ -39,8 +39,9 @@ func Test_generatePodScrapeConfig(t *testing.T) {
 					},
 				},
 				ep: vmv1beta1.PodMetricsEndpoint{
-					Path: "/metric",
-					Port: "web",
+					MaxScrapeSize: "30B",
+					Path:          "/metric",
+					Port:          "web",
 					AttachMetadata: vmv1beta1.AttachMetadata{
 						Node: pointer.Bool(true),
 					},
@@ -56,6 +57,7 @@ kubernetes_sd_configs:
   namespaces:
     names:
     - default
+max_scrape_size: 30B
 metrics_path: /metric
 relabel_configs:
 - action: drop

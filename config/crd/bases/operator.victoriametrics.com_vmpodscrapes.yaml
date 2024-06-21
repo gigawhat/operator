@@ -208,6 +208,9 @@ spec:
                       interval:
                         description: Interval at which metrics should be scraped
                         type: string
+                      max_scrape_size:
+                        description: MaxScrapeSize defines a maximum size of scraped data for a job
+                        type: string
                       metricRelabelConfigs:
                         description: MetricRelabelConfigs to apply to samples before ingestion.
                         items:

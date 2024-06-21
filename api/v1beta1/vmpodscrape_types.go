@@ -100,6 +100,9 @@ type PodMetricsEndpoint struct {
 	// Timeout after which the scrape is ended
 	// +optional
 	ScrapeTimeout string `json:"scrapeTimeout,omitempty"`
+	// MaxScrapeSize defines a maximum size of scraped data for a job
+        // +optional
+        MaxScrapeSize string `json:"max_scrape_size,omitempty"`
 	// SampleLimit defines per-podEndpoint limit on number of scraped samples that will be accepted.
 	// +optional
 	SampleLimit uint64 `json:"sampleLimit,omitempty"`

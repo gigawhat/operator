@@ -52,6 +52,9 @@ func generateNodeScrapeConfig(
 	if nodeSpec.ScrapeTimeout != "" {
 		cfg = append(cfg, yaml.MapItem{Key: "scrape_timeout", Value: nodeSpec.ScrapeTimeout})
 	}
+	if nodeSpec.MaxScrapeSize != "" {
+		cfg = append(cfg, yaml.MapItem{Key: "max_scrape_size", Value: nodeSpec.MaxScrapeSize})
+	}
 	if nodeSpec.Path != "" {
 		cfg = append(cfg, yaml.MapItem{Key: "metrics_path", Value: nodeSpec.Path})
 	}

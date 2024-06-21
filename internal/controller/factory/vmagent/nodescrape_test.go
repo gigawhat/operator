@@ -96,6 +96,7 @@ relabel_configs:
 						FollowRedirects: pointer.Bool(true),
 						ScrapeTimeout:   "10s",
 						ScrapeInterval:  "5s",
+						MaxScrapeSize:   "10MB",
 						Params:          map[string][]string{"module": {"client"}},
 						JobLabel:        "env",
 						HonorTimestamps: pointer.Bool(true),
@@ -135,6 +136,7 @@ kubernetes_sd_configs:
 - role: node
 scrape_interval: 5s
 scrape_timeout: 10s
+max_scrape_size: 10MB
 metrics_path: /metrics
 proxy_url: https://some-url
 sample_limit: 50

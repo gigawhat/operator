@@ -41,6 +41,9 @@ type VMNodeScrapeSpec struct {
 	// Timeout after which the scrape is ended
 	// +optional
 	ScrapeTimeout string `json:"scrapeTimeout,omitempty"`
+	// MaxScrapeSize defines a maximum size of scraped data for a job
+	// +optional
+	MaxScrapeSize string `json:"max_scrape_size,omitempty"`
 	// OAuth2 defines auth configuration
 	// +optional
 	OAuth2 *OAuth2 `json:"oauth2,omitempty"`

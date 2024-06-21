@@ -185,6 +185,7 @@ relabel_configs:
 					},
 					BearerTokenFile: "/var/run/tolen",
 					ScrapeInterval:  "60m",
+					MaxScrapeSize:   "1MB",
 				},
 				i:                        0,
 				apiserverConfig:          nil,
@@ -202,6 +203,7 @@ kubernetes_sd_configs:
     names:
     - default
 scrape_interval: 40m
+max_scrape_size: 1MB
 tls_config:
   insecure_skip_verify: false
   ca_file: /etc/vmagent-tls/certs/default_tls-secret_ca

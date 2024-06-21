@@ -57,6 +57,9 @@ func generatePodScrapeConfig(
 	if ep.ScrapeTimeout != "" {
 		cfg = append(cfg, yaml.MapItem{Key: "scrape_timeout", Value: ep.ScrapeTimeout})
 	}
+	if ep.MaxScrapeSize != "" {
+		cfg = append(cfg, yaml.MapItem{Key: "max_scrape_size", Value: ep.MaxScrapeSize})
+	}
 	if ep.Path != "" {
 		cfg = append(cfg, yaml.MapItem{Key: "metrics_path", Value: ep.Path})
 	}
