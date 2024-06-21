@@ -27,6 +27,8 @@ aliases:
 
 - [vmalertmanagerconfig](./api.md#vmalertmanagerconfig): adds missing `handleReconcileErr` callback to the reconcile loop. It must properly handle errors and deregister objects.
 
+- [vmagent](./api.md#vmagent) and [vmsingle](./api.md#vmsingle): adds new fields into `streamAggrConfig`: `keep_input`, `ignore_first_samples`.
+
 <a name="v0.45.0"></a>
 
 ## [v0.45.0](https://github.com/VictoriaMetrics/operator/releases/tag/v0.45.0) - 10 Jun 2024
